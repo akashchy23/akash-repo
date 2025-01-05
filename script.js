@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menuButton');
     const slideMenu = document.getElementById('slideMenu');
+    const closeMenuButton = document.getElementById('closeMenu');
     const sendButton = document.getElementById('sendButton');
     const formResponse = document.getElementById('formResponse');
 
-    // Toggle Slide Menu
+    
     menuButton.addEventListener('click', () => {
         slideMenu.classList.toggle('open');
     });
 
-    // Simulate Form Submission
+   
+    closeMenuButton.addEventListener('click', () => {
+        slideMenu.classList.remove('open');
+    });
+
+    
     sendButton.addEventListener('click', () => {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
